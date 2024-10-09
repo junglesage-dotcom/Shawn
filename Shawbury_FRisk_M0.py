@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import joblib
 
-# Load the dataset from Excel file with error handling
+# Load dataset from Excel file with error handling
 try:
     data = pd.read_excel('Shawbury_NewDataset.xlsx')
 except FileNotFoundError:
@@ -27,7 +27,7 @@ except KeyError as e:
     print(f"Error: Missing column in the dataset - {e}")
     exit(1)
 
-# Split the data into training and testing sets
+# Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Feature scaling (for SVM)
