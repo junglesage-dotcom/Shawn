@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Load the dataset from an Excel file
+# Loading dataset from an Excel file
 try:
     data = pd.read_excel('Shawbury_NewDataset.xlsx')  # Replace with your actual file name
 except FileNotFoundError:
@@ -12,10 +12,10 @@ except Exception as e:
     print(f"An error occurred: {e}")
     exit(1)
 
-# Check the first few rows of the dataset
+# Checking first few rows of the dataset
 print(data.head())
 
-# Set the plot style
+# Setting plot style
 sns.set(style="whitegrid")
 
 # 1. Bar Chart: Average Groundwater Level by Month
