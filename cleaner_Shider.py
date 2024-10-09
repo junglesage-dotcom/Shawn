@@ -65,7 +65,7 @@ def process_groundwater_data(input_file, output_file):
         # Merge with monthly averages to include all months
         final_df = pd.merge(all_months, result_df, on=['Year', 'Month'], how='left').fillna(0)
 
-        print(f"Final result DataFrame:\n{final_df.head(12)}")
+        print(f"Final result DataFrame:\n{final_df.head(15)}")
 
         # Export to Excel
         with pd.ExcelWriter(output_file) as writer:
